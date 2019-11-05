@@ -2,7 +2,7 @@ class Key
 
   attr_reader :key
 
-  def initialize(key = "stingtest")
+  def initialize(key = KeyOffsetHelper.ran_num_gen)
     @key = key
   end
 
