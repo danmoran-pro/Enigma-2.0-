@@ -8,21 +8,21 @@ class OffsetTest < Minitest::Test
     @offset_2 = Offset.new("051119")
     @offset_3 = Offset.new("021093")
   end
-  #
-  # def test_offset_exists
-  #   assert_instance_of Offset, @offset_2
-  # end
-  #
-  # def test_can_take_date_or_use_current_date
-  #   @offset_1.offset.stubs(:offset).returns("021093")
-  #
-  #   assert_equal "051119", @offset_2.offset
-  # end
-  #
-  # def test_date_is_squared_and_returns_last_4_numbers
-  #   @offset_1.offset.stubs(:key).returns("021093")
-  #   assert_equal "2161",@offset_2.squared
-  # end
+
+  def test_offset_exists
+    assert_instance_of Offset, @offset_2
+  end
+
+  def test_can_take_date_or_use_current_date
+    @offset_1.offset.stubs(:offset).returns("021093")
+
+    assert_equal "051119", @offset_2.offset
+  end
+
+  def test_date_is_squared_and_returns_last_4_numbers
+    @offset_1.offset.stubs(:key).returns("021093")
+    assert_equal "2161",@offset_2.squared
+  end
 
   def test_offset_array_can_be_converted
     expected = {

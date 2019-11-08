@@ -10,9 +10,9 @@ module KeyOffsetHelper
   end
 
   def self.alphabet_array
-    ('a'..'z').to_a << " "
+    arr = ('a'..'z').to_a << " "
+    lemon = []
+    (0..26).map { |num| lemon << [arr[num], num] }
+    lemon.to_h
   end
-
-
-
 end
