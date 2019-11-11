@@ -9,10 +9,14 @@ module KeyOffsetHelper
     time.delete("/")
   end
 
-  def self.alphabet_array
+  def self.alphabet_hash
     arr = ('a'..'z').to_a << " "
     lemon = []
     (0..26).map { |num| lemon << [arr[num], num] }
     lemon.to_h
   end
+
+  def self.alphabet_arr
+    arr = ('a'..'z').to_a << " "
+  end 
 end
